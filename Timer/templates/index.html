@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="card">
+        <div class="desc">
+            Do urodzin pozostało
+        </div>
+        <div class="timer">
+            <span id="hours">{{godziny}} godzin</span>
+            <span id="minutes">{{minuty}} minut</span>
+        </div>
+    </div>
+    <script>
+        let minutes = {{minuty}}
+        let hours = {{godziny}}
+        var time_left = minutes + hours * 3600
+
+        function makeTimer() {
+
+            time_left -= 1
+
+            hours_left = Math.floor(time_left/3600);
+            minutes_left = time_left % 3600
+
+            document.getElementById("hours").innerHTML = `${hours_left} godzin`
+            document.getElementById("minutes").innerHTML = `${minutes_left} minut`
+        }
+        setInterval(function() { makeTimer(); }, 60000);
+    </script>
+</body>
+</html>

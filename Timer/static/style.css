@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #664CAF;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background-color: #6f53be;
+}
+
+.desc {
+    margin-top: -60px;
+    color: #f4f8f8;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.timer {
+    margin-top: 60px;
+    color: #fba925;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
