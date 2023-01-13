@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #664CAF;
+    background-color: #123a4b;
 }
 
 .card {
@@ -19,7 +19,8 @@ body {
     flex-direction: column;
     width: 400px;
     height: 400px;
-    background-color: #6f53be;
+    background-color: #123a4b;
+    filter: brightness(110%);
 }
 
 .desc {
